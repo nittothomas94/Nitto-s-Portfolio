@@ -59,7 +59,7 @@ export const AdminBar: React.FC<{
           className="py-2 text-white"
           classNames={{
             controls: 'font-medium text-white',
-            logo: 'text-white',
+
             user: 'text-white',
           }}
           cmsURL={getClientSideURL()}
@@ -68,7 +68,6 @@ export const AdminBar: React.FC<{
             plural: collectionLabels[collection]?.plural || 'Pages',
             singular: collectionLabels[collection]?.singular || 'Page',
           }}
-          logo={<Title />}
           onAuthChange={onAuthChange}
           onPreviewExit={() => {
             fetch('/next/exit-preview').then(() => {
