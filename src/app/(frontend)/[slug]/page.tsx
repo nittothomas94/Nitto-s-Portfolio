@@ -78,7 +78,7 @@ export default async function Page({ params: paramsPromise }: Args) {
   // Home Page Code
 
   return (
-    <article className="w-full min-h-screen flex flex-col gap-[20px] py[20px] px-[120px]">
+    <article className="w-full min-h-screen flex flex-col gap-[20px] mt-10">
       <PageClient />
       {/* Allows redirects for valid pages too */}
       <PayloadRedirects disableNotFound url={url} />
@@ -89,7 +89,8 @@ export default async function Page({ params: paramsPromise }: Args) {
       {/* About Component */}
       <AboutSection />
       {/* Project CMS Block Component */}
-      <RenderBlocks blocks={layout} /> {/* ✅ DYNAMIC CMS BLOCKS RENDERED BELOW */}
+      <RenderBlocks blocks={layout} />
+      {/* ✅ DYNAMIC CMS BLOCKS RENDERED BELOW */}
       {/* Contact Component */}
       <ContactSection />
       {/*  */}
