@@ -83,23 +83,16 @@ export default async function Page({ params: paramsPromise }: Args) {
       {/* Allows redirects for valid pages too */}
       <PayloadRedirects disableNotFound url={url} />
       {draft && <LivePreviewListener />}
-
+      {/* ✅ STATIC SECTION: Add here */}
       {/* Home Component */}
       <HomeSection />
-
       {/* About Component */}
       <AboutSection />
-
       {/* Project CMS Block Component */}
-      <div className="w-full h-[400px] bg-blue-400">
-        <h1>Project CMS Block Component</h1>
-      </div>
+      <RenderBlocks blocks={layout} /> {/* ✅ DYNAMIC CMS BLOCKS RENDERED BELOW */}
       {/* Contact Component */}
       <ContactSection />
       {/*  */}
-
-      {/* <RenderHero {...hero} /> */}
-      <RenderBlocks blocks={layout} />
     </article>
   )
 }

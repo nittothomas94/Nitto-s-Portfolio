@@ -27,7 +27,7 @@ export const HeaderClient: React.FC<HeaderClientProps> = () => {
 
   return (
     <header
-      className="z-20 w-[490px] h-[50px] border border-green-400 mt-[25px] mx-auto sticky top-[10px] flex items-center justify-center gap-5 rounded-xl px-10"
+      className="z-20 w-full h-[50px] border border-green-400 mt-[25px] mx-auto sticky top-[10px] flex items-center justify-center gap-5 rounded-xl px-10"
       {...(theme ? { 'data-theme': theme } : {})}
     >
       <a
