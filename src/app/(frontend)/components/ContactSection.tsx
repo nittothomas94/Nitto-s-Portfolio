@@ -6,10 +6,10 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="w-full min-h-[600px] flex flex-col lg:flex-row px-6 md:px-10 py-12 gap-8"
+      className="w-full min-h-[600px] flex flex-col lg:flex-row lg:justify-between px-6 md:px-10 py-12 gap-8 lg:gap-4 lg:px-20"
     >
       {/* Left: Info + Links */}
-      <div className="w-full lg:w-[55%] flex flex-col gap-8 pt-10 text-white">
+      <div className="w-full lg:w-[60%] flex flex-col gap-8 pt-10 text-white">
         <div>
           <h4 className="text-xl font-medium text-green-400 mb-1">Contact Me</h4>
           <h1 className="text-4xl font-bold text-green-400">Get In Touch</h1>
@@ -24,7 +24,7 @@ export default function ContactSection() {
         {/* Contact Boxes */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-4">
           {/* Call */}
-          <div className="relative h-[90px] w-full max-w-[300px] border border-gray-500 px-16 py-5 cursor-pointer hover:shadow-[0_10px_30px_4px_green] transition-all active:scale-95">
+          <div className="relative h-[90px] w-full border border-gray-500 px-16 py-5 cursor-pointer hover:shadow-[0_10px_30px_4px_green] transition-all active:scale-95">
             <a href="tel:+919446979075" className="no-underline text-white">
               <i className="material-icons absolute left-6 top-6 text-green-400 text-[31px]">
                 call
@@ -35,7 +35,7 @@ export default function ContactSection() {
           </div>
 
           {/* Email */}
-          <div className="relative h-[90px] w-full max-w-[300px] border border-gray-500 px-16 py-5 cursor-pointer hover:shadow-[0_10px_30px_4px_green] transition-all active:scale-95">
+          <div className="relative h-[90px] w-full border border-gray-500 px-16 py-5 cursor-pointer hover:shadow-[0_10px_30px_4px_green] transition-all active:scale-95">
             <a
               href="mailto:nittothomas94@gmail.com?subject=Interested%20to%20connect&body=Hi%20Nitto,%20I%20am%20interested%20to%20connect%20with%20you."
               className="no-underline text-white"
@@ -49,7 +49,7 @@ export default function ContactSection() {
           </div>
 
           {/* Location */}
-          <div className="relative h-[90px] w-full max-w-[300px] border border-gray-500 px-16 py-5 cursor-pointer hover:shadow-[0_10px_30px_4px_green] transition-all active:scale-95">
+          <div className="relative h-[90px] w-full border border-gray-500 px-16 py-5 cursor-pointer hover:shadow-[0_10px_30px_4px_green] transition-all active:scale-95">
             <a
               href="https://www.google.com/maps?q=Alappuzha"
               target="_blank"
@@ -65,7 +65,7 @@ export default function ContactSection() {
           </div>
 
           {/* WhatsApp */}
-          <div className="relative h-[90px] w-full max-w-[300px] border border-gray-500 px-16 py-5 cursor-pointer hover:shadow-[0_10px_30px_4px_green] transition-all active:scale-95">
+          <div className="relative h-[90px] w-full border border-gray-500 px-16 py-5 cursor-pointer hover:shadow-[0_10px_30px_4px_green] transition-all active:scale-95">
             <a
               href="https://wa.me/919446979075?text=Hi%20Nitto,%20I%20am%20interested%20to%20connect%20with%20you."
               target="_blank"
@@ -81,7 +81,7 @@ export default function ContactSection() {
       </div>
 
       {/* Right: Contact Form */}
-      <div className="w-full lg:w-[50%] px-4 md:px-10">
+      <div className="w-full lg:w-[45%] px-4 md:px-8">
         <Contact />
       </div>
     </section>
