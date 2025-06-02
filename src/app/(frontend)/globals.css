@@ -89,7 +89,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground min-h-[100vh] flex flex-col;
+    @apply bg-background text-foreground  flex flex-col;
   }
 }
 
@@ -108,11 +108,12 @@ body {
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
-/* 
+
 html,
 body {
-  max-width: 100%;
-  overflow-x: hidden;
-} */
+  width: 100%;
+}
