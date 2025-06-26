@@ -6,8 +6,20 @@ import { unstable_cache } from 'next/cache'
 
 type Global = keyof Config['globals']
 
+let resolvedConfig: Awaited<typeof configPromise> | null = null
+
 async function getGlobal(slug: Global, depth = 0) {
-  const payload = await getPayload({ config: configPromise })
+  if (!resolvedConfig) {
+    const configResult = await configPromise
+    resolvedConfig = {
+      ...configResult,
+      secret: process.env.PAYLOAD_SECRET || 'your-fallback-secret',
+    }
+  }
+
+  const payload = await getPayload({
+    config: resolvedConfig,
+  })
 
   const global = await payload.findGlobal({
     slug,
@@ -17,10 +29,7 @@ async function getGlobal(slug: Global, depth = 0) {
   return global
 }
 
-/**
- * Returns a unstable_cache function mapped with the cache tag for the slug
- */
 export const getCachedGlobal = (slug: Global, depth = 0) =>
-  unstable_cache(async () => getGlobal(slug, depth), [slug], {
+  unstable_cache(() => getGlobal(slug, depth), [slug], {
     tags: [`global_${slug}`],
   })
