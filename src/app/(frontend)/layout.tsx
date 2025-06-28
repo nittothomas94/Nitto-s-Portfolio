@@ -11,9 +11,6 @@ import { Providers } from '@/providers'
 import { InitTheme } from '@/providers/Theme/InitTheme'
 import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
 import { draftMode } from 'next/headers'
-import VerticalLineLeft from './components/VerticalLineLeft'
-import VerticalLineRight from './components/VerticalLineRight'
-
 import './globals.css'
 import { getServerSideURL } from '@/utilities/getURL'
 
@@ -46,8 +43,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             }}
           />
           <Header />
-          <VerticalLineLeft />
-          <VerticalLineRight />
           {children}
         </Providers>
       </body>

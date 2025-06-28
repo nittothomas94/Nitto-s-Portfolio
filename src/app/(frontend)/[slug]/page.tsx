@@ -8,21 +8,13 @@ import React, { cache } from 'react'
 import { homeStatic } from '@/endpoints/seed/home-static'
 
 import { RenderBlocks } from '@/blocks/RenderBlocks'
-// import { RenderHero } from '@/heros/RenderHero'
+import { RenderHero } from '@/heros/RenderHero'
 import { generateMeta } from '@/utilities/generateMeta'
 import PageClient from './page.client'
 import { LivePreviewListener } from '@/components/LivePreviewListener'
 
-//my code
-
-import { getPayloadHMR } from '@payloadcms/next/utilities'
-import HomeSection from '../components/HomeSection/HomeSection'
-import AboutSection from '../components/AboutSection'
-import ContactSection from '../components/ContactSection'
-
 export async function generateStaticParams() {
-  // const payload = await getPayload({ config: configPromise })
-  const payload = await getPayloadHMR({ config: configPromise })
+  const payload = await getPayload({ config: configPromise })
   const pages = await payload.find({
     collection: 'pages',
     draft: false,
@@ -51,8 +43,6 @@ type Args = {
   }>
 }
 
-// Home Page
-
 export default async function Page({ params: paramsPromise }: Args) {
   const { isEnabled: draft } = await draftMode()
   const { slug = 'home' } = await paramsPromise
@@ -73,27 +63,18 @@ export default async function Page({ params: paramsPromise }: Args) {
     return <PayloadRedirects url={url} />
   }
 
-  const { layout } = page
-
-  // Home Page Code
+  const { hero, layout } = page
 
   return (
-    <article className="w-full min-h-screen flex flex-col md:gap-[20px]">
+    <article className="pt-16 pb-24">
       <PageClient />
       {/* Allows redirects for valid pages too */}
       <PayloadRedirects disableNotFound url={url} />
+
       {draft && <LivePreviewListener />}
-      {/* ✅ STATIC SECTION: Add here */}
-      {/* Home Component */}
-      <HomeSection />
-      {/* About Component */}
-      <AboutSection />
-      {/* Project CMS Block Component */}
+
+      <RenderHero {...hero} />
       <RenderBlocks blocks={layout} />
-      {/* ✅ DYNAMIC CMS BLOCKS RENDERED BELOW */}
-      {/* Contact Component */}
-      <ContactSection />
-      {/*  */}
     </article>
   )
 }
