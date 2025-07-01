@@ -9,7 +9,7 @@ const VerticalLineLeft: React.FC = () => {
   }
 
   return (
-    <div className="hidden lg:flex fixed left-10 top-5 z-[200] flex-col items-center gap-2 font-poppins text-green-500">
+    <div className="hidden lg:flex fixed lg:left-5 xl:left-10 top-5 z-[200] flex-col items-center gap-2 font-poppins text-green-500">
       {/* Vertical Line */}
       <div className="w-px h-[40vh] bg-gray-400/50" />
 

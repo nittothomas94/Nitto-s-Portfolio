@@ -4,7 +4,7 @@ import React from 'react'
 
 const VerticalLineRight: React.FC = () => {
   return (
-    <div className="hidden lg:flex fixed right-10 bottom-10 z-[200] flex-col items-center font-poppins">
+    <div className="hidden lg:flex fixed lg:right-6 xl:right-10 bottom-10 z-[200] flex-col items-center font-poppins">
       {/* Vertical Line */}
       <div className="w-px h-[15vh] bg-gray-400/50 relative">
         {/* Icon Group */}

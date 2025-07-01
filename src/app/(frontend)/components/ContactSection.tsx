@@ -6,16 +6,16 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="w-full min-h-[600px] flex flex-col lg:flex-row lg:justify-between px-6 md:px-10 py-12 gap-8 lg:gap-4 lg:px-20"
+      className="w-full sm:w-[95%] md:w-[90%] lg:w-[928px] xl:w-[1250px] 2xl:w-[1500px] px-[10px] m-auto min-h-[600px] flex flex-col lg:flex-row lg:justify-between py-12 gap-8 lg:gap-4 border"
     >
       {/* Left: Info + Links */}
       <div className="w-full lg:w-[60%] flex flex-col gap-8 pt-10 text-white">
         <div>
-          <h4 className="text-xl font-medium text-green-400 mb-1">Contact Me</h4>
-          <h1 className="text-4xl font-bold text-green-400">Get In Touch</h1>
+          <h4 className="text-[25px] font-medium text-green-400 mb-[1px]">Contact Me</h4>
+          <h1 className="text-[40px] xl:text-4xl font-bold text-green-400">Get In Touch</h1>
         </div>
 
-        <p className="text-base leading-relaxed max-w-2xl">
+        <p className="text-[13px] w-full leading-relaxed max-w-2xl">
           Have a project in mind or just want to say hello? Feel free to reach out to me! I&apos;m
           always open to discussing new opportunities, collaborations, or any questions you may
           have. Let&apos;s connect and create something amazing together.
@@ -30,7 +30,7 @@ export default function ContactSection() {
                 call
               </i>
               <h3 className="font-semibold">Call Me</h3>
-              <p className="text-sm">+91 9446979075</p>
+              <p className="text-[12px] md:text-[14px]">+91 9446979075</p>
             </a>
           </div>
 
@@ -44,7 +44,7 @@ export default function ContactSection() {
                 mail
               </i>
               <h3 className="font-semibold">Email Me</h3>
-              <p className="text-sm">nittothomas94@gmail.com</p>
+              <p className="text-[12px] md:text-[14px]">nittothomas94@gmail.com</p>
             </a>
           </div>
 
@@ -60,7 +60,7 @@ export default function ContactSection() {
                 pin_drop
               </i>
               <h3 className="font-semibold">Location</h3>
-              <p className="text-sm">Alappuzha</p>
+              <p className="text-[12px] md:text-[14px]">Alappuzha</p>
             </a>
           </div>
 
@@ -74,14 +74,14 @@ export default function ContactSection() {
             >
               <i className="fa-brands fa-whatsapp absolute left-6 top-6 text-green-400 text-[31px]" />
               <h3 className="font-semibold">WhatsApp</h3>
-              <p className="text-sm">Chat on WhatsApp</p>
+              <p className="text-[12px] md:text-[14px]">Chat on WhatsApp</p>
             </a>
           </div>
         </div>
       </div>
 
       {/* Right: Contact Form */}
-      <div className="w-full lg:w-[45%] px-4 md:px-8">
+      <div className="w-full lg:w-[45%] px-[10px] lg:px-4 md:px-8">
         <Contact />
       </div>
     </section>

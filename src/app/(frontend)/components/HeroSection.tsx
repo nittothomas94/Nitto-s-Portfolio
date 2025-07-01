@@ -1,7 +1,7 @@
 'use client'
 
 import Typewriter from 'typewriter-effect'
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 import Link from 'next/link'
 
 const socialLinks = [
@@ -37,23 +37,23 @@ const containerVariants = {
   },
 }
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   show: {
     opacity: 1,
     y: 0,
     transition: {
       duration: 0.5,
-      ease: 'easeInOut', // ✅ Type-safe easing
+      ease: 'easeInOut' as const, // 👈 prevents TS error
     },
   },
 }
 
 export default function HeroSection() {
   return (
-    <div className="w-full xl:w-[1220px] 2xl:w-[1500px] 2xl:pl-[50px] m-auto md:min-h-[55vh] lg:h-[70vh] xl:h-[75vh] py-10 flex flex-col gap-10 lg:gap-14 md:mt-5 lg:mt-10 xl:mt-[80px]">
+    <div className="w-full px-[10px] sm:px-0 sm:w-[95%] md:w-[90%] lg:w-[928px] xl:w-[1250px] 2xl:w-[1500px] 2xl:pl-[50px] border m-auto md:min-h-[55vh] lg:h-[70vh] xl:h-[75vh] py-10 flex flex-col gap-[10px] md:gap-11 lg:gap-14 md:mt-5 lg:mt-10 xl:mt-[80px]">
       {/* Typewriter Heading */}
-      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-[50px] font-bold text-green-400 leading-tight">
+      <h1 className="text-[28px] sm:text-4xl md:text-5xl lg:text-7xl font-bold text-green-400 leading-tight">
         <Typewriter
           options={{
             strings: ["Hi I'm,"],
@@ -66,12 +66,12 @@ export default function HeroSection() {
       </h1>
 
       {/* Name with animation */}
-      <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-9xl xl:text-[100px] font-[600] text-[#dbdbdb] opacity-0 animate-dropIn -mt-4 sm:-mt-6 xl:mt-[8px]">
+      <h1 className="text-[50px] sm:text-6xl md:text-7xl lg:text-[100px] xl:text-[110px] font-[600] text-[#dbdbdb] opacity-0 animate-dropIn sm:-mt-6 xl:mt-[8px]">
         Nitto Thomas
       </h1>
 
       {/* Caption */}
-      <p className="text-lg sm:text-xl md:text-[20px] lg:text-[20px] xl:text-[22px] leading-relaxed text-white">
+      <p className="text-[13px] sm:text-xl md:text-[20px] lg:text-[20px] xl:text-[22px] leading-relaxed text-white mt-[10px]">
         <span className="text-green-400">Fullstack Developer based in India </span>
         Crafting User-Centric <span className="text-green-400">Experiences</span>, <br />
         Crafting sleek high-performance websites focusing on clean code and user experience.
@@ -79,7 +79,7 @@ export default function HeroSection() {
 
       {/* Social / Connect Me */}
       <motion.div
-        className="grid grid-cols-2 md:flex gap-4 sm:gap-6 xl:mt-5"
+        className="grid grid-cols-2 md:flex gap-4 sm:gap-6 xl:gap-7 mt-[20px] xl:mt-5"
         variants={containerVariants}
         initial="hidden"
         animate="show"
@@ -90,7 +90,7 @@ export default function HeroSection() {
               <a
                 href={link.href}
                 download={link.download}
-                className="px-4 py-2 border border-white rounded-xl cursor-pointer no-underline hover:scale-110 hover:border-green-400 transition-all duration-300 flex items-center gap-2"
+                className="px-[10px] py-[5px] sm:px-4 sm:py-2 xl:px-[22px] xl:py-[10px] border border-white rounded-xl cursor-pointer no-underline hover:scale-110 hover:border-green-400 transition-all duration-300 flex items-center gap-2 xl:gap-3"
               >
                 <i className={`${link.icon} text-green-400`} />
                 {link.label}
@@ -100,7 +100,7 @@ export default function HeroSection() {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 border border-white rounded-xl cursor-pointer no-underline hover:scale-110 hover:border-green-400 transition-all duration-300 flex items-center gap-2"
+                className="px-[10px] py-[5px] sm:px-4 sm:py-2 xl:px-[22px] xl:py-[10px] border border-white rounded-xl cursor-pointer no-underline hover:scale-110 hover:border-green-400 transition-all duration-300 flex items-center gap-2 xl:gap-3"
               >
                 <i className={`${link.icon} text-green-400`} />
                 {link.label}

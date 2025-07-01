@@ -49,7 +49,7 @@ const Contact = () => {
   }
 
   return (
-    <div className="w-full min-h-[60vh] p-8 flex flex-col gap-6 rounded-md shadow-[0_0_4px_4px_rgb(28,86,24)] hover:shadow-[0_5px_4px_4px_green] transition-shadow duration-300">
+    <div className="w-full min-h-[60vh] p-[10px] sm:p-8 flex flex-col gap-6 rounded-md shadow-[0_0_4px_4px_rgb(28,86,24)] hover:shadow-[0_5px_4px_4px_green] transition-shadow duration-300">
       <ToastContainer />
       <Input
         type="text"
@@ -79,7 +79,7 @@ const Contact = () => {
         <Button
           text="Send"
           onClick={onSendClick}
-          className="w-[90%] h-10 rounded-full bg-green-700 text-white font-semibold hover:bg-green-800 active:scale-95 transition-all duration-200"
+          className="w-full h-10 rounded-full bg-green-700 text-white font-semibold hover:bg-green-800 active:scale-95 transition-all duration-200"
         />
       </div>
     </div>
