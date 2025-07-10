@@ -43,6 +43,7 @@
     }
   },
   "include": [
+     "types",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
