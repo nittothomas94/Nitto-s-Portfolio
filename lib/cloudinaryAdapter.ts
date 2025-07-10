@@ -1,6 +1,6 @@
 import type { UploadOptions, FileData, GeneratedAdapter } from 'payload/config'
 import { v2 as cloudinary } from 'cloudinary'
-import streamifier from 'streamifier'
+const streamifier = require('streamifier')
 
 require('dotenv').config()
 
