@@ -67,6 +67,7 @@ const ProjectsSection = () => {
                     src={project.image.url}
                     alt={project.title}
                     fill
+                    unoptimized
                     className="object-cover rounded-md"
                   />
                 )}
