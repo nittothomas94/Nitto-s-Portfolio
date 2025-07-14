@@ -14,9 +14,9 @@ type Industry = {
   }
 }
 
-type Props = {
-  industries: Industry[]
-}
+// type Props = {
+//   industries: Industry[]
+// }
 
 export const IndustryGridBlock = ({ industries }: { industries: Industry[] }) => {
   if (!industries || industries.length === 0) return null

@@ -73,7 +73,7 @@ export default buildConfig({
     cloudStoragePlugin({
       collections: {
         media: {
-          adapter: cloudinaryAdapter,
+          adapter: () => cloudinaryAdapter, // ✅ wrap in function
           disableLocalStorage: true,
         },
       },
