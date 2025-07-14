@@ -1,5 +1,7 @@
 // storage-adapter-import-placeholder
 import { mongooseAdapter } from '@payloadcms/db-mongodb'
+import { cloudStoragePlugin } from '@payloadcms/plugin-cloud-storage' // 👈 add this
+import { cloudinaryAdapter } from '../lib/cloudinaryAdapter' // 👈 adjust if path differs
 
 import sharp from 'sharp' // sharp-import
 import path from 'path'
@@ -68,7 +70,14 @@ export default buildConfig({
   globals: [Header, Footer],
   plugins: [
     ...plugins,
-    // storage-adapter-placeholder
+    cloudStoragePlugin({
+      collections: {
+        media: {
+          adapter: cloudinaryAdapter,
+          disableLocalStorage: true,
+        },
+      },
+    }),
   ],
   secret: process.env.PAYLOAD_SECRET,
   sharp,

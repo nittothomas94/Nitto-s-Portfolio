@@ -50,7 +50,7 @@
     "redirects.js",
     "next.config.js",
     "next-sitemap.config.cjs"
-  ],
+, "lib/cloudinaryAdapter.ts"  ],
   "exclude": [
     "node_modules"
   ]
