@@ -41,7 +41,7 @@ const ProjectsSection = () => {
   }, [])
 
   return (
-    <section className="w-full sm:w-[95%] md:w-[90%] lg:w-[928px] xl:w-[1250px] 2xl:w-[1500px] px-[10px] m-auto mt-[40px] border py-16 bg-[#010314] text-white">
+    <section className="w-full sm:w-[95%] md:w-[90%] lg:w-[928px] xl:w-[1250px] 2xl:w-[1500px] px-[10px] m-auto mt-[40px]  py-16 bg-[#010314] text-white">
       <h2 className="text-center text-[38px] md:text-5xl font-bold text-[#30f285] mb-12">
         MY PROJECTS
       </h2>

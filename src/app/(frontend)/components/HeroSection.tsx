@@ -51,7 +51,7 @@ const itemVariants: Variants = {
 
 export default function HeroSection() {
   return (
-    <div className="w-full px-[10px] sm:px-0 sm:w-[95%] md:w-[90%] lg:w-[928px] xl:w-[1250px] 2xl:w-[1500px] 2xl:pl-[50px] border m-auto md:min-h-[55vh] lg:h-[70vh] xl:h-[75vh] py-10 flex flex-col gap-[10px] md:gap-11 lg:gap-14 md:mt-5 lg:mt-10 xl:mt-[80px]">
+    <div className="w-full px-[10px] sm:px-0 sm:w-[95%] md:w-[90%] lg:w-[928px] xl:w-[1250px] 2xl:w-[1500px] 2xl:pl-[50px] m-auto md:min-h-[55vh] lg:h-[70vh] xl:h-[75vh] py-10 flex flex-col gap-[10px] md:gap-11 lg:gap-14 md:mt-5 lg:mt-10 xl:mt-[80px]">
       {/* Typewriter Heading */}
       <h1 className="text-[28px] sm:text-4xl md:text-5xl lg:text-7xl font-bold text-green-400 leading-tight">
         <Typewriter

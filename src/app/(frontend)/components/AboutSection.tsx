@@ -15,7 +15,7 @@ export default function AboutSection() {
   return (
     <motion.section
       id="about"
-      className="w-full sm:w-[95%] md:w-[90%] lg:w-[928px] xl:w-[1250px] 2xl:w-[1500px] m-auto min-h-[80vh] border px-[10px] mt-[20px] py-5 md:py-14 xl:pb-[60px] flex flex-col gap-[10px] sm:gap-10"
+      className="w-full sm:w-[95%] md:w-[90%] lg:w-[928px] xl:w-[1250px] 2xl:w-[1500px] m-auto min-h-[80vh] px-[10px] mt-[20px] py-5 md:py-14 xl:pb-[60px] flex flex-col gap-[10px] sm:gap-10"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
